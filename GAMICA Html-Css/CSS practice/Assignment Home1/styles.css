@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    font-family: sans-serif;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    flex-direction: row;
+    color: black;
+    background: none;
+    align-items: center;
+    background-color: lightgray;
+    position: fixed;
+    /* position: relative is used to change position of an element without disturbing other
+    elements and position:absolute is used to change the position of element at anywhere
+    on our page */
+    z-index: 1;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.boy{
+    position: relative;
+    left: 50px;
+    display: inline-block;
+    width: 90%;
+    background-color: lightseagreen;
+}
+
+#search {
+    background-color: lightgreen;
+    color: white;
+    padding: 20px;
+    margin-right: 100px;
+    border-radius: 30px;
+    height: 5px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: larger !important;
+    position: relative;
+    left: 40px;
+    /* margin-left: 140px;
+    margin-right: 70px; */
+}
+
+#img {
+    height: 400px;
+    width: 100%;
+    background-image: url(1.png);
+    background-position: center;
+    background-position-x: left;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 70px;
+    z-index: -1;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

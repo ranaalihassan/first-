@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Tahoma, sans-serif;
+        }
+        .container {
+            width: 100%;
+        }
+        ul {
+            display: flex;
+            list-style-type: none;
+            background-color: coral;
+        }
+
+        ul li {
+            padding: 15px 20px;
+            transition: .3s;
+        }
+
+        ul li:hover {
+            background-color: rgb(192, 95, 60);
+            color: white;
+        }
+
+        .navbtn {
+            display: none;
+            width: 30px;
+            height: 3px;
+            margin: 15px;
+            background-color: black;
+            position: relative;
+        }
+        .navbtn::before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: black;
+            position: absolute;
+            top: -8px;
+        }
+        .navbtn::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: black;
+            position: absolute;
+            top: 8px;
+        }
+        main {
+            width: 70vw;
+            min-height: 70vh;
+            display: inline-flex;
+            background-color: gray;
+        }
+        aside {
+            width: 28vw;
+            height: 70vh;
+            background-color: lightgray;
+            display: inline-flex;
+        }
+        footer {
+            min-height: 25vh;
+            width: 100%;
+            background-color: red;
+        }
+
+        @media screen and (max-width: 425px) {
+            .nav-items {
+                display: none;
+            }
+
+            ul {
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .navbtn {
+                display: block;
+            }
+            main {
+            width: 100%;
+            min-height: 70vh;
+            /* display: inline-flex; */
+            background-color: rgb(75, 74, 74);
+        }
+        aside {
+            width: 100%;;
+            height: 70vh;
+            background-color: lightgray;
+            /* display: inline-flex; */
+        }
+        footer {
+            min-height: 25vh;
+            width: 100%;
+            background-color: red;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li class="logo">LOGO</li>
+                <span class="navbtn"></span>
+                <li class="nav-items">Home</li>
+                <li class="nav-items">Register</li>
+                <li class="nav-items">About</li>
+                <li class="nav-items">Contact</li>
+            </ul>
+        </nav>
+        <main></main><aside></aside>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

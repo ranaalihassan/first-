@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    @keyframes carMoving {
+        from{
+            left: 0;
+        }
+        to {
+            left: 80%;
+        }
+    }
+    @keyframes wheeling {
+        from{
+            transform: rotate(0deg)
+        }
+        to {
+            transform: rotate(720deg)
+        }
+    }
+    #meriCar {
+        animation: carMoving 4s ease-in-out 0s;
+        animation-fill-mode: forwards;
+        width: 400px;
+        position: absolute;
+        top: 0;
+    }
+    #carBody {
+        width: 100%;
+    }
+    .wheel {
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        animation: wheeling 4s ease-in-out 0s;
+    }
+    .wheel:nth-child(3) {
+        right: 56px;
+        top: 96px;
+    }
+    .wheel:nth-child(2) {
+        top: 96px;
+        left: 68px;
+    }
+    #road {
+        width: 100%
+    }
+    </style>
+</head>
+<body>
+    <img id="road" src="myroad.jpg" alt="">
+    <div id="meriCar">
+         <img id="carBody" src="my-car.png" alt="">
+         <img class="wheel" src="wheel.png" alt=""> 
+         <img class="wheel" src="wheel.png" alt="">
+    </div>
+
+</body>
+</html>

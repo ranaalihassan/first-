@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- transform prpoerty is used to change object's height, width and we can skew(strech) as well
+    transform: scale(2), rotate (30deg)
+    Animation
+    @keyframs animation{
+        0%{
+            background: green;
+        
+        }
+        45%{
+            transform:rotate(40deg)
+        }
+        animation-iteration-count: infinite;
+        animation: fanChla 4s linear 0s;
+    } -->
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    
+        <style>
+            @keyframes fanChala {
+    
+                0%{
+                    transform: rotate(0deg);
+                }
+    
+                100%{
+                    transform: rotate(360deg);
+                }
+    
+            }
+    
+    
+            @keyframes meriAnimation {
+    
+                0% {
+                    background: green;
+    
+                }
+    
+                50% {
+                    background: limegreen;
+                }
+    
+                70% {
+                    background: orange;
+                }
+    
+                100% {
+                    background: red;
+                }
+    
+            }
+    
+            #truck {
+                width: 200px;
+                position: absolute;
+                transform: rotate(30deg) scale(0.5) skew(20deg);
+                /* transform: skew(20deg); */
+                /* top:0; */
+                /* right: 0; */
+                /* transition: right 3s ease-in-out 0s, top 3s linear 0s; */
+            }
+    
+            #truck:hover {
+                /* right: 500px;
+                top:400px; */
+            }
+    
+            #tank {
+                width: 100px;
+                height: 600px;
+                background: green;
+                animation: meriAnimation 5s linear 0s;
+            }
+    
+            #fan{
+                animation: fanChala 4s linear 0s ;
+                animation-iteration-count: infinite;
+            }
+    
+        </style>
+    
+    </head>
+    
+    <body>
+    
+        <img id="fan" src="fan.png" alt="">
+    
+        <div id="tank"></div>
+        <!-- <img id='truck' src="car1.png" alt=""> -->
+        @keyframes jahazAnimation {
+
+            0% {
+                bottom: 0;
+                right: 0;
+            }
+
+            30% {
+                right: 0;
+                bottom: 60%;
+            }
+
+            70%{
+                bottom: 60%;
+                right: 80%;
+                opacity: 0;
+            }
+
+            100%{
+                bottom:0;
+                right: 80%;
+            }
+
+        }
+
+        #plane {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            animation: jahazAnimation 10s linear 0s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img id="plane" src="some.png" alt="">
+
+    <!-- <div id="tank"></div> -->
+    <!-- <img id='truck' src="car1.png" alt=""> -->
+
+</body>
+
+</html>
+    </body>
+    
+    </html>
+</body>
+</html>

@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.parent{
+    width: 100%;
+    background-color: grey;
+    height: 100vh;
+}
+.nav-list{
+    height: 70px;
+    background-color: white;
+    margin: auto;
+    width: 100%;
+    display: flex;
+}
+.list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.art{
+    padding-left: 170px;
+    font-weight: bolder;
+    font-size: 1.7em;
+    margin-right: 400px;
+    text-align: center;
+    padding-top: 13px;
+}
+.o-list{
+    padding-top: 25px;
+    display: flex;
+    padding-left: 30px;
+}
+.duration{
+    width: 100%;
+    height: 90px;
+    background-color: lightskyblue;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.text{
+    margin: auto;
+    display: flex;
+    width: 100%
+}
+.text-list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tlol{
+    display: flex;
+    padding: 30px;
+}

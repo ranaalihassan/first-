@@ -1,0 +1,35 @@
+.parent {
+    height: 50px;
+    background: lightgray;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.child {
+    height: 50px;
+    color: black !important;
+    font-size: larger;
+}
+
+.parent :nth-child(1) {
+    font-size: 2em;
+}
+
+.parent :nth-child(8) {
+    font-size: 1.5em;
+}
+
+/* margin-left: calc (50% - %50px)
+      /* :root {
+          --meraCurrentcolor: red;  */
+
+:root {
+    --meraCurrentcolor: red;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    background: var(--meraCurrentcolor);
+    margin-left: calc(50% - 50px);
+    /* = margin:auto; */
+}
