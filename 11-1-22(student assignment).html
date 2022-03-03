@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 11</title>
+    <style>
+      table {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="form">
+      <div><input id="username" type="text" placeholder="userName" /></div>
+      <div><input id="password" type="password" placeholder="userPassword"/></div>
+      <div><input id="email" type="email" placeholder="userEmail" /></div>
+      <button onclick="saveuser(event)">Save Users</button>
+      <button onclick="showuser(event)">Show Users</button>
+    </form>
+    <table id="content"></table>
+    <script>
+      let selected;
+      let mode = "Create";
+      let currentIndex;
+      let users = [];
+      function saveuser(event) {
+        event.preventDefault();
+        if (mode == "Create") {
+          let user = {
+            name: username.value,
+            password: password.value,
+            email: email.value,
+          };
+
+          users.push(user);
+        } else if (mode == "Edit") {
+          users[currentIndex] = {
+            name: username.value,
+            password: password.value,
+            email: email.value,
+          };
+          mode = "Create";
+        }
+        form.reset();
+      }
+      function showuser(event) {
+        event.preventDefault();
+        content.innerHTML = "";
+        users.forEach((element, myindex) => {
+          content.innerHTML +=
+            "<tr onclick='colorRow(event)'><td>" +
+            element.name +
+            "</td><td>" +
+            element.password +
+            "</td><td>" +
+            element.email +
+            "</td><td><button onclick='deletecell(event," +
+            myindex +
+            ")'>Delete</button></td><td><button onclick='editcell(event," +
+            myindex +
+            ")'>Edit</button></td></tr>";
+        });
+        form.reset();
+      }
+      function deletecell(event, index) {
+        event.target.parentNode.parentNode.remove();
+        users.splice(index, 1);
+      }
+      function editcell(event, index) {
+        // users[index].name = prompt("Enter your name");
+        // users[index].password = prompt("Enter your password");
+        // users[index].email = prompt("Enter your email");
+        currentIndex = index;
+        mode = "Edit";
+        username.value = users[currentIndex].name;
+        password.value = users[currentIndex].password;
+        email.value = users[currentIndex].email;
+      }
+      function colorRow(event) {
+        if (selected) {
+          selected.style.backgroundColor = "transparent";
+        }
+        event.currentTarget.style.backgroundColor = "red";
+        selected = event.currentTarget;
+      }
+    </script>
+  </body>
+</html>
